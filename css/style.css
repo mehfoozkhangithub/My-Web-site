@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-color: #000839;
+  --primary-shades: #00020b;
+  --para-color: #80849c;
+  --helper-color: #1264fa;
+  --white: #fff;
+  --bg-color: #e6e6eb;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--primary-color);
+}
+
+.para {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--para-color);
+}
+
+/*--------------------------------
+ header and navbar style start 
+ <!-- subscribe to thapa technical Channle plz 
+ link:https://www.youtube.com/thapatechnical -->
+------------------------- */
+.header {
+  height: 9.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5.4rem;
+  position: relative;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  font-size: 1.5rem;
+}
+
+.navbar-list .navbar-btn {
+  padding: 1.2rem 2.4rem;
+  background-color: var(--white);
+  border: 1px solid var(--helper-color);
+  color: var(--helper-color);
+  border-radius: 5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-list .navbar-link:hover,
+.navbar-list .navbar-link:active {
+  color: var(--helper-color);
+}
+
+.navbar-btn:hover,
+.navbar-btn:active {
+  background-color: var(--helper-color);
+  color: var(--white);
+}
+
+.navbar-link {
+  text-transform: uppercase;
+}
+
+.mobile-nav-icon {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
+.mobile-navbar-btn {
+  display: none;
+}
+
+.mobile-nav-icon[name="close"] {
+  display: none;
+}
+
+/* resuable code  */
+.section {
+  padding: 9.6rem 0;
+}
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid-two-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.btn {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  padding: 1.6rem 3.2rem;
+  border-radius: 10rem;
+  background-color: var(--helper-color);
+  color: var(--white);
+  transition: all 0.2s linear;
+}
+
+.btn:hover,
+.btn:active {
+  transform: scale(1.05);
+}
+
+/*--------------------------------
+ hero section style start 
+ <!-- subscribe to thapa technical Channle plz 
+ link:https://www.youtube.com/thapatechnical -->
+------------------------- */
+
+.section-hero {
+  position: relative;
+}
+
+.section-hero::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 9.6rem;
+  right: 0;
+  width: 30%;
+  height: 50%;
+  background: var(--bg-color);
+  z-index: -1;
+}
+
+.primary-heading {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.section-hero .para {
+  margin-top: 2rem;
+  margin-bottom: 3.2rem;
+}
+
+.hero-icons {
+  margin-top: 4.2rem;
+}
+
+.hero-icons .icon {
+  font-size: 6rem;
+  position: relative;
+}
+
+.hero-icons .icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 60%;
+  background-color: var(--helper-color);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.hero-icons h2 {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.section-hero .hero-icon-style .para {
+  line-height: 1.6;
+  font-family: 1.4rem;
+  margin: 0;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.hero-image img {
+  height: 90%;
+  box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.hero-img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  background-color: var(--primary-color);
+  padding: 4rem;
+}
+
+.hero-img-overlay .para {
+  color: var(--white);
+}
+
+.hero-img-overlay .para:nth-child(2) {
+  margin: 0;
+  font-weight: bold;
+}
+
+.hero-img-overlay .para:last-child {
+  margin: 0;
+}
+
+/*--------------------------------
+  media queries style start 
+  <!-- subscribe to thapa technical Channle plz 
+ link:https://www.youtube.com/thapatechnical -->
+------------------------- */
+
+@media (max-width: 1250px) {
+  .container {
+    padding: 0 6rem;
+  }
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 980px) {
+  .container {
+    max-width: 96rem;
+  }
+
+  .section-hero .grid-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .section-hero .hero-icons .grid-two-column {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translateX(100%);
+    transition: all 0.3s linear;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none;
+  }
+
+  .navbar .navbar-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar .navbar-link {
+    color: var(--white);
+  }
+
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 9999;
+  }
+
+  .active .navbar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    z-index: 999;
+  }
+
+  .active .mobile-navbar-btn .mobile-nav-icon[name="close"] {
+    display: block;
+    color: var(--white);
+  }
+  .active .mobile-navbar-btn .mobile-nav-icon[name="menu"] {
+    display: none;
+    color: var(--white);
+  }
+
+  .section::before {
+    height: 30%;
+  }
+
+  .hero-image img {
+    width: 130%;
+    margin-top: -10%;
+  }
+
+  .hero-image .hero-img-overlay {
+    width: 80%;
+    height: 75%;
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .hero-image img {
+    width: 80%;
+  }
+  .hero-image .hero-img-overlay {
+    width: 90%;
+    left: 0;
+  }
+}
